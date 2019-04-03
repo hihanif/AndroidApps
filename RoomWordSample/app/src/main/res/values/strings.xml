@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RoomWordSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="word_view">wordview</string>
+    <string name="title_activity_add_word">AddWordActivity</string>
+    <string name="add_word">ADD WORD</string>
+    <string name="enter_a_new_word">Enter a new word</string>
+</resources>

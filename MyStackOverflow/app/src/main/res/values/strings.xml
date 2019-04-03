@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyStackOverflow</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetrofitGithub</string>
+    <string name="action_settings">Settings</string>
+    <string name="load_repos">Load Repos</string>
+    <string name="send_comment">Send comment</string>
+    <string name="enter_your_comment">Enter your comment ...</string>
+</resources>
