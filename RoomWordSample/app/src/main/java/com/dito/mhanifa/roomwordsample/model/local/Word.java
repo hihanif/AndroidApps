@@ -1,4 +1,4 @@
-package com.dito.mhanifa.roomwordsample;
+package com.dito.mhanifa.roomwordsample.model.local;
 
 
 import android.arch.persistence.room.ColumnInfo;

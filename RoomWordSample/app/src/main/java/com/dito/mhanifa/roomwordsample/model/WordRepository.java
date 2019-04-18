@@ -1,8 +1,12 @@
-package com.dito.mhanifa.roomwordsample;
+package com.dito.mhanifa.roomwordsample.model;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
+
+import com.dito.mhanifa.roomwordsample.model.local.Word;
+import com.dito.mhanifa.roomwordsample.model.local.WordDao;
+import com.dito.mhanifa.roomwordsample.model.local.WordRoomDatabase;
 
 import java.util.List;
 
@@ -16,7 +20,7 @@ public class WordRepository {
         mAllWords = mWordDao.getAllWords();
     }
 
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 

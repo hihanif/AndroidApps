@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,9 +20,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddWordActivity"
+            android:name=".ui.AddWordActivity"
             android:label="@string/title_activity_add_word"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.EmptyActivity" android:exported="true"/>
+        <activity
+            android:name=".ui.BasicActivity"
+            android:exported="true"
+            android:label="@string/title_activity_basic" />
+        <activity
+            android:name=".ui.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:exported="true"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

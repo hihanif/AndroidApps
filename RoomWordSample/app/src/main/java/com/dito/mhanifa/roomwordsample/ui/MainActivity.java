@@ -1,4 +1,4 @@
-package com.dito.mhanifa.roomwordsample;
+package com.dito.mhanifa.roomwordsample.ui;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -15,13 +15,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.dito.mhanifa.roomwordsample.R;
+import com.dito.mhanifa.roomwordsample.WordViewModel;
+import com.dito.mhanifa.roomwordsample.model.local.Word;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int NEW_WORD_ACTIVITY_REQ_CODE = 1;
     WordViewModel wordViewModel;
-    WordListAdapter adapter;
+    IUpdateAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +54,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         RecyclerView recyclerView = findViewById(R.id.words_recycler_view);
-        adapter = new WordListAdapter(this);
-        recyclerView.setAdapter(adapter);
+//        adapter = new WordListAdapter(this);
+        adapter = new WordListAdapter2(this);
+        recyclerView.setAdapter((WordListAdapter2)adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
     }
 
     @Override

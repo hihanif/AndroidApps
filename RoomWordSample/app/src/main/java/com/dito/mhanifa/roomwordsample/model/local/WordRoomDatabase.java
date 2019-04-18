@@ -1,4 +1,4 @@
-package com.dito.mhanifa.roomwordsample;
+package com.dito.mhanifa.roomwordsample.model.local;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
@@ -15,7 +15,7 @@ public abstract class WordRoomDatabase extends RoomDatabase {
 
     private static volatile WordRoomDatabase INSTANCE;
 
-    static WordRoomDatabase getDatabase(final Context context) {
+    public static WordRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (WordRoomDatabase.class) {
                 if (INSTANCE == null) {

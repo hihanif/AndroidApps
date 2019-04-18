@@ -1,4 +1,4 @@
-package com.dito.mhanifa.roomwordsample;
+package com.dito.mhanifa.roomwordsample.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,11 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dito.mhanifa.roomwordsample.R;
+import com.dito.mhanifa.roomwordsample.model.local.Word;
+
 import java.util.List;
 
-public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordListViewHolder> {
+public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordListViewHolder>
+    implements IUpdateAdapter {
 
-    public class WordListViewHolder extends RecyclerView.ViewHolder {
+    public WordListAdapter(List<Word> words) {
+
+    }
+
+    class WordListViewHolder extends RecyclerView.ViewHolder {
         private final TextView wordItemView;
 
         public WordListViewHolder(@NonNull View itemView) {
@@ -21,7 +29,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordLi
         }
     }
 
-    private final LayoutInflater mLayoutInflator;
+    LayoutInflater mLayoutInflator;
     private List<Word> mWords; // cached copy of words
 
     public WordListAdapter(final Context context) {
@@ -46,6 +54,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordLi
         return (mWords != null) ? mWords.size() : 0;
     }
 
+    @Override
     public void setWords(List<Word> words) {
         mWords = words;
         notifyDataSetChanged();
