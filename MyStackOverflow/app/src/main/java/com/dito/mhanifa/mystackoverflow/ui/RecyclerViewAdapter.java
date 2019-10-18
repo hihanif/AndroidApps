@@ -13,7 +13,7 @@ import com.dito.mhanifa.mystackoverflow.data.remote.Answer;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class dRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private List<Answer> data;
     private Context context;
 
